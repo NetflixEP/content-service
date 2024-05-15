@@ -1,0 +1,12 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: content-service
+  mvc:
+    static-path-pattern: /swagger*
+
+springdoc:
+  api-docs:
+    path: /api-docs
