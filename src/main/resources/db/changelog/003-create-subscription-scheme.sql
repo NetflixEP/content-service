@@ -1,6 +1,8 @@
 --liquibase formatted sql
 
 --changeset author:llav3ji2019 failOnError:true
+create extension if not exists "uuid-ossp";
+
 create table if not exists subscription_type (
     code varchar,
     description varchar,
@@ -10,13 +12,13 @@ create table if not exists subscription_type (
 );
 
 create table if not exists subscription (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     status boolean,
     start_date timestamp,
     end_date timestamp,
-    subscription_type_id int,
+    subscription_type varchar,
 
-    constraint subscription_fk1 foreign key (subscription_type_id) references subscription_type (code)
+    constraint subscription_fk1 foreign key (subscription_type) references subscription_type (code)
 );
 
 -----

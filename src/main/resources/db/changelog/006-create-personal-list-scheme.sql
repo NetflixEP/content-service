@@ -8,7 +8,7 @@ create table if not exists personal_list (
     created_date timestamp,
     user_id uuid,
 
-    constraint personal_list_fk1 foreign key (user_id) references user (id)
+    constraint personal_list_fk1 foreign key (user_id) references users (id)
 );
 
 create table if not exists personal_list_content (

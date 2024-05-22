@@ -11,7 +11,7 @@ create table if not exists employee (
 
 create table if not exists role (
     id serial primary key,
-    name varchar primary key
+    name varchar not null unique
 );
 
 create table if not exists cast_member (

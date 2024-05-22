@@ -22,7 +22,7 @@ create table if not exists episode (
     user_id uuid,
     episode_detail_id uuid,
 
-    constraint episode_fk1 foreign key (user_id) references user (id),
+    constraint episode_fk1 foreign key (user_id) references users (id),
     constraint episode_fk2 foreign key (episode_detail_id) references episode_detail (id)
 );
 

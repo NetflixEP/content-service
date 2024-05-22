@@ -38,9 +38,4 @@ public class ContentController {
     ) {
         return commentService.addCommentToContent(contentId, commentDto);
     }
-
-    public static void main(String[] args) {
-        String a = "aaa, aaa, fff";
-        System.out.println(Character.isDigit('5'));
-    }
 }
