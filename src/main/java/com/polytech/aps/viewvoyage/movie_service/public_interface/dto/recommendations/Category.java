@@ -1,8 +1,10 @@
 package com.polytech.aps.viewvoyage.movie_service.public_interface.dto.recommendations;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
+@RequiredArgsConstructor
 public enum Category {
     MOVIE("Фильм"),
     SERIES("Сериал"),
@@ -10,8 +12,4 @@ public enum Category {
     ANIMATED_SERIES("Анимационный сериал");
 
     private final String name;
-
-    Category(String name) {
-        this.name = name;
-    }
 }

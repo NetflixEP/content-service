@@ -1,8 +1,10 @@
 package com.polytech.aps.viewvoyage.movie_service.public_interface.dto.recommendations;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
+@RequiredArgsConstructor
 public enum Genre {
     ACTION_FILM("Боевик"),
     BLOCKBUSTER("Блокбастер"),
@@ -16,8 +18,4 @@ public enum Genre {
     THRILLER("Триллер");
 
     private final String name;
-
-    Genre(String name) {
-        this.name = name;
-    }
 }

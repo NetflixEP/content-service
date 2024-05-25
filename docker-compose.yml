@@ -12,7 +12,7 @@ services:
     ports:
       - '5434:5432'
     volumes:
-      - db:/var/lib/postgresql/data3
+      - db:/var/lib/postgresql/netflix
 
 volumes:
   db:
