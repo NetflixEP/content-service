@@ -1,11 +1,9 @@
 --liquibase formatted sql
 
 --changeset author:llav3ji2019 failOnError:true
-create sequence s_employee;
-create sequence s_cast_member;
 
 create table if not exists employee (
-    id bigint primary key default nextval('s_employee'),
+    id bigserial primary key,
     full_name varchar not null unique
 );
 
@@ -15,7 +13,7 @@ create table if not exists role (
 );
 
 create table if not exists cast_member (
-    id bigint primary key default nextval('s_cast_member'),
+    id bigserial primary key,
     actor_id bigint not null,
     content_id uuid not null,
     role_id int not null,
@@ -30,5 +28,3 @@ create table if not exists cast_member (
 -- rollback drop table cast_member;
 -- rollback drop table role;
 -- rollback drop table employee;
--- rollback drop sequence s_cast_member;
--- rollback drop sequence s_employee;

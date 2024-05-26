@@ -1,18 +1,16 @@
 --liquibase formatted sql
 
 --changeset author:llav3ji2019 failOnError:true
-create extension if not exists "uuid-ossp";
-
 create table if not exists subscription_type (
     code varchar,
     description varchar,
-    price numeric default 0,
+    price numeric,
 
     primary key (code)
 );
 
 create table if not exists subscription (
-    id uuid primary key default gen_random_uuid(),
+    id uuid primary key /* [jooq ignore start]  default GEN_RANDOM_UUID() [jooq ignore stop] */,
     status boolean,
     start_date timestamp,
     end_date timestamp,

@@ -1,10 +1,8 @@
 --liquibase formatted sql
 
 --changeset author:llav3ji2019 failOnError:true
-create extension if not exists "uuid-ossp";
-
 create table if not exists content (
-    id uuid primary key default gen_random_uuid(),
+    id uuid primary key /* [jooq ignore start]  default GEN_RANDOM_UUID() [jooq ignore stop] */,
     title varchar not null,
     quality varchar not null,
     genre varchar not null,
@@ -24,5 +22,4 @@ create table if not exists content (
 
 -----
 
--- rollback drop extension "uuid-ossp";
 -- rollback drop table content;
