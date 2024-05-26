@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  content-db:
+    container_name: netflix-content-db
+    image: postgres:15
+    restart: always
+    environment:
+      - POSTGRES_DB=content-db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - '5434:5432'
+    volumes:
+      - db:/var/lib/postgresql/netflix
+
+volumes:
+  db:
+    driver: local

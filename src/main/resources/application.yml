@@ -7,6 +7,20 @@ spring:
   mvc:
     static-path-pattern: /swagger*
 
+  datasource:
+    url: jdbc:postgresql://localhost:5434/content-db
+    username: admin
+    password: admin
+
+  liquibase:
+    change-log: db/changelog-master.yaml
+    enabled: true
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
 springdoc:
   api-docs:
     path: /api-docs
