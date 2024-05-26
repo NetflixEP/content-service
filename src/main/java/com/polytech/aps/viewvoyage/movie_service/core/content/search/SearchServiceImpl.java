@@ -1,4 +1,4 @@
-package com.polytech.aps.viewvoyage.movie_service.core.search;
+package com.polytech.aps.viewvoyage.movie_service.core.content.search;
 
 import com.polytech.aps.viewvoyage.movie_service.public_interface.search.SearchService;
 import lombok.RequiredArgsConstructor;

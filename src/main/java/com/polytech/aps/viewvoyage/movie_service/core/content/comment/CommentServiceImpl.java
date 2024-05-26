@@ -1,4 +1,4 @@
-package com.polytech.aps.viewvoyage.movie_service.core.comment;
+package com.polytech.aps.viewvoyage.movie_service.core.content.comment;
 
 import com.polytech.aps.viewvoyage.movie_service.public_interface.comment.CommentService;
 import com.polytech.aps.viewvoyage.movie_service.public_interface.dto.comment.CommentDto;
