@@ -1,8 +1,8 @@
 package com.polytech.aps.viewvoyage.movie_service.core.recommendation;
 
 import com.polytech.aps.viewvoyage.movie_service.public_interface.dto.content.Category;
-import com.polytech.aps.viewvoyage.movie_service.public_interface.dto.recommendations.ContentRecommendationDto;
 import com.polytech.aps.viewvoyage.movie_service.public_interface.dto.content.Genre;
+import com.polytech.aps.viewvoyage.movie_service.public_interface.dto.recommendations.ContentRecommendationDto;
 import com.polytech.aps.viewvoyage.movie_service.public_interface.recommendation.RecommendationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

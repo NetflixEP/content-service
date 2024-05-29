@@ -15,6 +15,7 @@ create table if not exists content (
     publisher varchar,
     created_date date not null,
     remaining_time timestamp,
+    text tsvector,
 
     constraint valid_genre check (genre in ('ACTION_FILM', 'BLOCKBUSTER', 'CARTOON', 'COMEDY', 'DOCUMENTARY', 'HISTORICAL_FILM', 'HORROR_FILM', 'MUSICAL', 'DRAMA', 'THRILLER')),
     constraint valid_category check (category in ('MOVIE', 'SERIES', 'ANIMATED_FILM', 'ANIMATED_SERIES')),
@@ -22,7 +23,10 @@ create table if not exists content (
     constraint valid_age_restriction check (age_restriction in ('6+', '12+', '16+', '18+'))
 );
 
+create index idx_gin_content_text on content using gin (text);
+
 -----
 
 -- rollback drop extension "uuid-ossp";
+-- rollback drop index idx_gin_content_text;
 -- rollback drop table content;

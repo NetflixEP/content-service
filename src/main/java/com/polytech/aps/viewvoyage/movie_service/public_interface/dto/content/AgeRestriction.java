@@ -3,6 +3,9 @@ package com.polytech.aps.viewvoyage.movie_service.public_interface.dto.content;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * Возрастные ограничения
+ */
 @Getter
 @RequiredArgsConstructor
 public enum AgeRestriction {

@@ -3,6 +3,9 @@ package com.polytech.aps.viewvoyage.movie_service.public_interface.dto.content;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * Различные категории фильмов
+ */
 @Getter
 @RequiredArgsConstructor
 public enum Category {

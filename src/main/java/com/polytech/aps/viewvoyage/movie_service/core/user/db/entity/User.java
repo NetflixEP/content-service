@@ -1,7 +1,18 @@
 package com.polytech.aps.viewvoyage.movie_service.core.user.db.entity;
 
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDate;
@@ -42,10 +53,10 @@ public class User {
     private Boolean status;
 
     @Column(name = "subscription_start_date")
-    private LocalDateTime start_date;
+    private LocalDateTime startDate;
 
     @Column(name = "subscription_end_date")
-    private LocalDateTime end_date;
+    private LocalDateTime endDate;
 
     @JoinColumn(name = "subscription_type", insertable = false, updatable = false)
     @ManyToOne(targetEntity = SubscriptionType.class, fetch = FetchType.LAZY)

@@ -11,5 +11,3 @@ databaseChangeLog:
       file: db/changelog/005-create-episode-scheme.sql
   - include:
       file: db/changelog/006-create-personal-list-scheme.sql
-  - include:
-      file: db/changelog/007-create-content-search.sql

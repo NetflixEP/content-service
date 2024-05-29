@@ -3,6 +3,9 @@ package com.polytech.aps.viewvoyage.movie_service.public_interface.dto.content;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * Различные жанры для фильмов и сериалов
+ */
 @Getter
 @RequiredArgsConstructor
 public enum Genre {
